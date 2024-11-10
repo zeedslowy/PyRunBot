@@ -1,22 +1,18 @@
+import pyrogram
 import telebot
 import os
 import logging
 import subprocess
+import config  # config.py dosyasını içe aktar
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 
-# Telegram botunuzun token'ını buraya girin
-TOKEN = "7060799256:AAHpaWrmcB4mgbHejYZk3lnELCLr8lFLFyo"
-
-# Yöneticinin kullanıcı ID'si
-ADMIN_ID = 6629910007
-
-# İzin verilen kullanıcıların ID'lerini saklamak için dosya adı
-ALLOWED_USERS_FILE = "allowed_users.txt"
-
-# Çalıştırılan dosyaları kaydetmek için dosya adı
-RUNNING_FILES = "running_files.txt"
+# config.py'den token'ı ve diğer ayarları alıyoruz
+TOKEN = config.TOKEN
+ADMIN_ID = config.ADMIN_ID
+ALLOWED_USERS_FILE = config.ALLOWED_USERS_FILE
+RUNNING_FILES = config.RUNNING_FILES
 
 allowed_users = set()
 
