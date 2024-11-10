@@ -1,1 +1,1 @@
-bot: python3 chatgpt.py
+bot: python3 run.py
